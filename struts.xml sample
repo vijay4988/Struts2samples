@@ -1,0 +1,22 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+
+    <constant name="struts.multipart.maxSize" value="1000000" />
+    
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+        <action name="loadUser" class="registration.Registration" method="loadUser">
+            <result name="success">registration.jsp</result>
+        </action>
+        
+        <action name="adduser" class="registration.Registration" method="addnewUser">
+            <result name="success">registration.jsp</result>
+        </action>
+     </package>
+     
+</struts>
